@@ -32,7 +32,9 @@ for index in range(0, len(montants), 3):
         with cols[i]:
             if st.button(f"{montant}€"):
                 ajouter_argent(montant)
+                st.rerun()
 
 # Bouton pour réinitialiser
 if st.button('Réinitialiser'):
     st.session_state.total_paye = 0.0
+    st.rerun()
